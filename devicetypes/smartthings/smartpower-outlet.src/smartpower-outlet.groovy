@@ -133,5 +133,5 @@ def configure() {
 	sendEvent(name: "checkInterval", value: 2 * 10 * 60 + 1 * 60, displayed: false, data: [protocol: "zigbee", hubHardwareId: device.hub.hardwareID])
 
 	// OnOff minReportTime 0 seconds, maxReportTime 5 min. Reporting interval if no activity
-	refresh() + zigbee.onOffConfig(0, 300) + zigbee.electricMeasurementPowerConfig()
+	refresh() + zigbee.onOffConfig(0, 300) + zigbee.electricMeasurementPowerConfig(1,600,5)
 }
